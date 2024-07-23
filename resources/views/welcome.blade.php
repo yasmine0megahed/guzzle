@@ -15,5 +15,9 @@
 @foreach ($jsondata as $data )
     <h1>{{$data['id'] .'->'.$data['title']}} </h1>
 @endforeach
+
+@foreach ($titles as $title)
+   <h5> {{$title}} </h5>
+@endforeach
     </body>
 </html>

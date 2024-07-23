@@ -11,8 +11,8 @@ class HttpPostController extends Controller
     {
         $response = Http::get('https://jsonplaceholder.typicode.com/posts');
         $jsondata = $response->json();
-        // dd($jsondata);
-        return view('welcome',compact('jsondata'));
+        $titles=collect($jsondata)->pluck('title');
+        return view('welcome',compact('jsondata','titles'));
     }
 
 
